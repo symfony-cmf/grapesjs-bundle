@@ -1,0 +1,32 @@
+{
+    "name": "symfony-cmf/grapes-bundle",
+    "description": "Bundle to enable grapesjs support as a Symfony form.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ElectricMaxxx",
+            "email": "maximilian.berghoff@gmx.de"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "symfony/form": "^2.8 || ^3.0 || ^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Symfony\\Cmf\\Bundle\\GrapesjsBundle\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Symfony\\Cmf\\Bundle\\GrapesjsBundle\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}

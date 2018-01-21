@@ -1,0 +1,7 @@
+/vendor/
+/node_modules/
+composer.lock
+yarn.lock
+composer.phar
+tests/Resources/app/cache
+tests/Resources/app/logs

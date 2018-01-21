@@ -1,0 +1,17 @@
+{% block cmf_grapes_edit_widget %}
+    {% block cmf_grapes_edit_widget_js %}
+        {% block cmf_grapes_edit_widget_assets -%}
+            {% include 'CmfGrapesjsBundle:Base:edit.html.twig' %}
+        {%- endblock %}
+
+        <script type="text/javascript">
+			var editor = grapesjs.init({
+				container : '#cmf-gjs',
+				components: '<div class="txt-red">Hello world!</div>',
+				style: '.txt-red{color: red}',
+			});
+        </script>    {% endblock %}
+
+    <div id="cmf-gjs"></div>
+
+{% endblock %}
