@@ -5,11 +5,14 @@
         {%- endblock %}
 
         <script type="text/javascript">
-			var editor = grapesjs.init({
-				container : '#cmf-gjs',
-				components: '<div class="txt-red">Hello world!</div>',
-				style: '.txt-red{color: red}',
-			});
+            jQuery(($) => {
+            	$('#{{ id }}').cmfGrapes({
+                    grapes_options: {
+						components: '<div class="txt-red">Hello world!</div>',
+						style: '.txt-red{colo:red}'
+                    }
+                });
+            });
         </script>    {% endblock %}
 
     <div id="cmf-gjs"></div>
