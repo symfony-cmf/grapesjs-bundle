@@ -1,5 +1,5 @@
 {
-    "name": "symfony-cmf/grapes-bundle",
+    "name": "symfony-cmf/grapesjs-bundle",
     "description": "Bundle to enable grapesjs support as a Symfony form.",
     "type": "library",
     "license": "MIT",
