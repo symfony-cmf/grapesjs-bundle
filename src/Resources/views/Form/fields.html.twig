@@ -5,16 +5,29 @@
         {%- endblock %}
 
         <script type="text/javascript">
-            jQuery(($) => {
-            	$('#{{ id }}').cmfGrapes({
-                    grapes_options: {
-						components: '<div class="txt-red">Hello world!</div>',
+			jQuery(function ($) {
+				$('#{{ id }}-cmf-grapes').cmfGrapes({
+					grapes_options: {
 						style: '.txt-red{colo:red}'
-                    }
-                });
-            });
-        </script>    {% endblock %}
+					},
+					request: {
+						load: function (nodePath) {
+							return {
+								url: '{{ path('_cmf_get_resource', {
+                                    repositoryName: repository_name,
+                                    path: '__path__',
+                                    _locale: app.request.locale
+                                }) }}'.replace('__path__', nodePath)
+							};
+						},
+					},
+					root_node: '{{ root_node }}',
+				});
+			});
+        </script>
 
-    <div id="cmf-gjs"></div>
+    {% endblock %}
+
+    <div id="{{ id }}-cmf-grapes"></div>
 
 {% endblock %}

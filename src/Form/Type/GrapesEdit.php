@@ -16,10 +16,18 @@ class GrapesEdit extends AbstractType
     public function buildView(FormView $view, FormInterface $form, array $options)
     {
         parent::buildView($view, $form, $options);
+        $view->vars['root_node'] = $options['root_node'];
+        $view->vars['repository_name'] = $options['repository_name'];
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
+        $resolver->setDefault('root_node', '/');
+        $resolver->setAllowedValues('root_node', function ($value) {
+            return '/' === $value[0];
+        });
+
+        $resolver->setDefault('repository_name', 'default');
     }
 
     public function getBlockPrefix()
