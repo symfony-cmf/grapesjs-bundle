@@ -1,0 +1,16 @@
+parameters:
+    kernel.secret: 'test'
+
+framework:
+    translator: { enabled: true, fallback: en }
+    serializer: true
+    templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
+
+
+cmf_grapesjs:
+    options:
+        key: value
+
+services:
+      Symfony\Cmf\Bundle\SeoBundle\Tests\Fixtures\App\Controller\TestController:
+            public: true

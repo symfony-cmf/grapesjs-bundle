@@ -16,7 +16,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
-class CmfGrapesjsBundleExtension extends Extension
+class CmfGrapesjsExtension extends Extension
 {
     /**
      * {@inheritdoc}
@@ -27,6 +27,5 @@ class CmfGrapesjsBundleExtension extends Extension
         $loader->load('services.xml');
 
         $config = $this->processConfiguration(new Configuration(), $configs);
-        $container->setParameter('cmf_tree_browser.description.icon_map', $config['icons']);
     }
 }

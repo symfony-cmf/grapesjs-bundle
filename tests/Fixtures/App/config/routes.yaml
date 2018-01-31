@@ -1,0 +1,4 @@
+routes:
+    show_content_to_form:
+        path: /test/show_content_to_form
+        controller: Symfony\Cmf\Bundle\SeoBundle\Tests\Fixtures\App\Controller\TestController::showContentToForm

@@ -1,0 +1,54 @@
+{
+  "name": "grapesjs-bundle",
+  "version": "1.0.0",
+  "description": "Symfony bundle to enable grapesjs support",
+  "main": "src/Resources/public/js/cmf_grapes.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/symfony-cmf/grapesjs-bundle.git"
+  },
+  "keywords": [
+    "grapesjs",
+    "symfony",
+    "cmf"
+  ],
+  "author": "Maximilian Berghoff <maximilian.berghoff@gmx.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/symfony-cmf/grapesjs-bundle/issues"
+  },
+  "homepage": "https://github.com/symfony-cmf/grapesjs-bundle#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "core-js": "^2.5.3",
+    "css-loader": "^0.28.9",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "jasmine-ajax": "^3.3.1",
+    "jasmine-core": "^2.9.1",
+    "jasmine-jquery": "^2.1.1",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.1.0",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-jasmine": "^1.1.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.9",
+    "style-loader": "^0.20.1",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "grapesjs": "^0.13.8",
+    "jquery": "^3.3.1",
+    "jquery-ui": "^1.12.1"
+  }
+}

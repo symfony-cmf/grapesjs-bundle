@@ -3,5 +3,5 @@
 composer.lock
 yarn.lock
 composer.phar
-tests/Resources/app/cache
-tests/Resources/app/logs
+tests/Fixtures/App/var/log
+tests/Fixtures/App/var/cache
