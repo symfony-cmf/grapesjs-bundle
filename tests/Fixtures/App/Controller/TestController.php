@@ -21,7 +21,11 @@ class TestController extends Controller
     {
         $page = new PageModel();
         $page->setTitle('Testing content to form');
-        $page->setBody('Testing body on content to form');
+        $page->setBody('<div class="row">
+                                <div class="cell">
+                                    <div class="c1456">Testing body on content to form</div>
+                                </div>
+                            </div>');
         $form = $this->createFormBuilder($page)
             ->add('title', TextType::class)
             ->add('body', GrapesInput::class)
