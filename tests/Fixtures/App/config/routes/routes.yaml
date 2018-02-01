@@ -1,0 +1,4 @@
+
+show_content_to_form:
+    path: /test/show_content_to_form
+    controller: Symfony\Cmf\Bundle\GrapesjsBundle\Tests\Fixtures\App\Controller\TestController::showContentToForm

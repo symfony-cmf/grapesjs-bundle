@@ -11,14 +11,14 @@
 
 namespace Symfony\Cmf\Bundle\TreeBrowserBundle\Tests\Unit\Form\Type;
 
-use Symfony\Cmf\Bundle\GrapesjsBundle\Form\Type\GrapesEdit;
+use Symfony\Cmf\Bundle\GrapesjsBundle\Form\Type\GrapesInput;
 use Symfony\Component\Form\Test\TypeTestCase;
 
 class GrapesjsTest extends TypeTestCase
 {
     public function testSubmitText()
     {
-        $form = $this->factory->create(GrapesEdit::class);
+        $form = $this->factory->create(GrapesInput::class);
 
         $form->submit('/cms/content/about');
 

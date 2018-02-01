@@ -5,3 +5,4 @@ yarn.lock
 composer.phar
 tests/Fixtures/App/var/log
 tests/Fixtures/App/var/cache
+tests/Fixtures/App/public/bundles/

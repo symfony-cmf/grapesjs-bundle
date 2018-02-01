@@ -1,1 +1,9 @@
-<h1>Show with content to form</h2>
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h2>Show with content to form</h2>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock %}

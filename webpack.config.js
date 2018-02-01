@@ -36,8 +36,14 @@ module.exports = {
     }
   },
   plugins : [
-    // required once multiple entry files are used (e.g. for different adapters)
-    //new webpack.optimize.CommonsChunkPlugin('common.cmf_tree_browser.js')
-    new ExtractTextPlugin('../css/cmf_grapes.[name].css')
-  ]
+    new ExtractTextPlugin('../css/cmf_grapes.[name].css'),
+    new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery"
+    })
+  ],
+  watchOptions: {
+ 	aggregateTimeout: 300,
+	poll: 1000
+  }
 };

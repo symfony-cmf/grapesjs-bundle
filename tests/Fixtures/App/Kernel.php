@@ -13,6 +13,7 @@ namespace Symfony\Cmf\Bundle\GrapesjsBundle\Tests\Fixtures\App;
 
 use Symfony\Cmf\Component\Testing\HttpKernel\TestKernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
+use Symfony\Component\Routing\RouteCollectionBuilder;
 
 class Kernel extends TestKernel
 {
@@ -24,5 +25,18 @@ class Kernel extends TestKernel
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
         $loader->load(__DIR__.'/config/config.php');
+    }
+
+    protected function configureRoutes(RouteCollectionBuilder $routes)
+    {
+        $confDir = $this->getProjectDir().'/config';
+        if (is_dir($confDir.'/routes/')) {
+            $routes->import($confDir.'/routes/*'.self::CONFIG_EXTS, '/', 'glob');
+        }
+    }
+
+    public function getProjectDir()
+    {
+        return parent::getKernelDir();
     }
 }

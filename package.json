@@ -51,8 +51,9 @@
     "webpack": "^3.10.0"
   },
   "dependencies": {
+    "extract-text-webpack-plugin": "^3.0.2",
     "grapesjs": "^0.13.8",
-    "jquery": "^3.3.1",
+    "jquery": "^2.2",
     "jquery-ui": "^1.12.1"
   }
 }

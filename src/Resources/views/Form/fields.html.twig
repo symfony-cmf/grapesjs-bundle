@@ -1,11 +1,10 @@
-{% block cmf_grapes_edit_widget %}
-    {% block cmf_grapes_edit_widget_js %}
-        {% block cmf_grapes_edit_widget_assets -%}
+{% block cmf_grapes_input_widget %}
+    {% block cmf_grapes_input_widget_js %}
+        {% block cmf_grapes_input_widget_assets -%}
 			{% block stylesheets -%}
 				<link rel="stylesheet" href="{{ asset('bundles/cmfgrapesjs/css/grapes.min.css') }}" type="text/css">
 			{%- endblock %}
 			{% block javascripts -%}
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/grapesjs/0.13.5/grapes.min.js"></script>
 				<script src="{{ asset('bundles/cmfgrapesjs/js/cmf_grapes.js') }}"></script>
 			{%- endblock %}
 		{%- endblock %}
@@ -16,9 +15,9 @@
 					grapes_options: {
 						style: '.txt-red{colo:red}'
 					},
-          simple_form_content: {
-            formId: '{{ id }}'
-          }
+				    simple_form_content: {
+					  formId: '{{ id }}'
+				    }
 				});
 			});
 		</script>

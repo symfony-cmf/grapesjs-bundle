@@ -1,8 +1,6 @@
+import * as grapesjs from 'grapesjs';
 
 export class GrapesJSAdapter {
-  grapesOptions = {};
-  editor = {};
-
   constructor(options) {
       if (!window.jQuery || !jQuery.fn.cmfGrapes) {
         throw 'The FancytreeAdapter requires both jQuery and the cmfGrapes library.';
@@ -22,7 +20,7 @@ export class GrapesJSAdapter {
 
   bindContentToForm(formId) {
     const formValue = $('#'+formId).val();
-    const domComponents = editor.DomComponents;
+    const domComponents = this.editor.DomComponents;
   	domComponents.clear();
   	domComponents.addComponent(formValue);
   	this.editor.on('component:update', () => {

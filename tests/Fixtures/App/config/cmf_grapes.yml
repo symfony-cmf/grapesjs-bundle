@@ -5,7 +5,9 @@ framework:
     translator: { enabled: true, fallback: en }
     serializer: true
     templating:      { engines: ['twig'] } #assets_version: SomeVersionScheme
-
+    router:
+        strict_requirements: ~
+        resource: 'config/routes/routes.yaml'
 
 cmf_grapesjs:
     options:
@@ -14,3 +16,8 @@ cmf_grapesjs:
 services:
       Symfony\Cmf\Bundle\SeoBundle\Tests\Fixtures\App\Controller\TestController:
             public: true
+twig:
+    debug:            '%kernel.debug%'
+    strict_variables: '%kernel.debug%'
+    form_themes:
+        - '@CmfGrapesjs/Form/fields.html.twig'
